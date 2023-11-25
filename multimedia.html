@@ -3,7 +3,7 @@
     <div class="centered">
         <a href=https://lazarot241.github.io/Index.html>Back to Home Page</a>
     </div>
-    <title>How to Eat Healthy</title>
+     <title>How to Eat Healthy</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,8 +14,7 @@
         }
         .container {
             width: 80%;
-            margin: auto;
-            overflow: hidden;
+            margin: 0 auto; /* Center aligning the container */
             text-align: center; /* Centering content */
         }
         .main-content {
@@ -25,24 +24,22 @@
             max-width: 100%; /* Ensures image is not larger than its container */
             height: auto;
             display: block; /* Image block for centering */
-            margin: 0 auto; /* Centering image */
+            margin: 20px auto; /* Centering image */
         }
         .video {
             position: relative;
-            padding-bottom: 56.25%; 
+            padding-bottom: 56.25%; /* Aspect ratio for 16:9 */
             height: 0;
+            overflow: hidden;
             margin: 20px 0; /* Adding margin for spacing */
         }
         .video iframe {
             position: absolute;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
             width: 100%;
             height: 100%;
             border: none; /* Removing iframe border */
-            margin: auto; /* Centering video */
         }
     </style>
 </head>
@@ -57,7 +54,7 @@
         <img src="Healthy Food.webp" alt="Healthy Food" class="image">
         
         <div class="video">
-            <iframe src="https://www.youtube.com/watch?v=Q4yUlJV31Rk" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/watch?v=Q4yUlJV31Rk" allowfullscreen></iframe>
         </div>
     </div>
 </body>
