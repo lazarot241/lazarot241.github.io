@@ -45,12 +45,23 @@
         <p>Total Cost: $<span id="totalCost">0</span></p>
     </form>
 
-    <script>
+   <script>
         function calculateTotal() {
             var pricePerShirt = 30;
+            var discountThreshold = 10; // Quantity threshold for discount
+            var discountRate = 0.10; // 10% discount
             var quantity = document.getElementById('quantity').value;
             var total = pricePerShirt * quantity;
+            var discountMessage = '';
+
+            // Apply discount if quantity is over the threshold
+            if (quantity > discountThreshold) {
+                total -= total * discountRate; // Apply discount
+                discountMessage = 'Congratulations! You got a 10% discount!';
+            }
+
             document.getElementById('totalCost').innerText = total.toFixed(2);
+            document.getElementById('discountMessage').innerText = discountMessage;
         }
     </script>
     <div class="form-section">
