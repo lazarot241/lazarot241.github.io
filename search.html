@@ -43,7 +43,21 @@
                 <input type="radio" id="relaxed" name="pace" value="relaxed">
                 <label for="relaxed">Relaxed</label>
             </div>
-            <!-- Add more questions as needed -->
+            <div class="question">
+                <p>Do you prefer creative or analytical activities?</p>
+                <input type="radio" id="creative" name="activityType" value="creative">
+                <label for="creative">Creative</label><br>
+                <input type="radio" id="analytical" name="activityType" value="analytical">
+                <label for="analytical">Analytical</label>
+            </div>
+
+            <div class="question">
+                <p>Would you rather work with your hands or with technology?</p>
+                <input type="radio" id="handsOn" name="workPreference" value="handsOn">
+                <label for="handsOn">Hands-on</label><br>
+                <input type="radio" id="technologyBased" name="workPreference" value="technologyBased">
+                <label for="technologyBased">Technology-based</label>
+            </div>
         </div>
         <button onclick="calculateResult()">Find My Hobby</button>
         <div id="result" class="result"></div>
