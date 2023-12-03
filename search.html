@@ -3,41 +3,67 @@
     <div class="centered">
         <a href=https://lazarot241.github.io/Index.html>Back to Home Page</a>
     </div>
-    <title>Hobbies and Interests Search</title>
+    <title>Hobby/Interest Finder </title>
     <style>
         body {
-            background-color: #f8f8f8; /* Off white background */
-            color: #808080; /* Gray text */
+            background-color: #f8f8f8;
+            color: #808080;
             font-family: Arial, sans-serif;
         }
-        .search-container {
-            text-align: center;
-            padding: 50px;
+        .quiz-container {
+            width: 60%;
+            margin: 20px auto;
+            padding: 20px;
         }
-        .search-bar {
-            width: 50%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #d3d3d3;
-            border-radius: 5px;
+        .question {
+            margin: 15px 0;
         }
-        .submit-button {
-            padding: 10px 20px;
-            background-color: #f0f0f0;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .submit-button:hover {
-            background-color: #e0e0e0;
+        .result {
+            display: none;
+            margin-top: 20px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <h1 class="centered">Find Your Hobbies and Interests</h1>
-    <div class="search-container">
-        <input type="text" class="search-bar" placeholder="Enter a hobby or interest...">
-        <button class="submit-button">Search</button>
+    <div class="quiz-container">
+        <h1>Discover Your Hobby</h1>
+        <div id="quiz">
+            <div class="question">
+                <p>Do you prefer indoor or outdoor activities?</p>
+                <input type="radio" id="indoor" name="activity" value="indoor">
+                <label for="indoor">Indoor</label><br>
+                <input type="radio" id="outdoor" name="activity" value="outdoor">
+                <label for="outdoor">Outdoor</label>
+            </div>
+            <div class="question">
+                <p>Do you enjoy more active or relaxed activities?</p>
+                <input type="radio" id="active" name="pace" value="active">
+                <label for="active">Active</label><br>
+                <input type="radio" id="relaxed" name="pace" value="relaxed">
+                <label for="relaxed">Relaxed</label>
+            </div>
+            <!-- Add more questions as needed -->
+        </div>
+        <button onclick="calculateResult()">Find My Hobby</button>
+        <div id="result" class="result"></div>
     </div>
+    <script>
+        function calculateResult() {
+            var activityType = document.querySelector('input[name="activity"]:checked').value;
+            var paceType = document.querySelector('input[name="pace"]:checked').value;
+            var hobby = "Reading"; // Default hobby
+
+            // Example logic to suggest a hobby
+            if(activityType === "outdoor" && paceType === "active") {
+                hobby = "Hiking";
+            } else if(activityType === "indoor" && paceType === "relaxed") {
+                hobby = "Painting";
+            }
+
+            document.getElementById('result').innerHTML = 'Your suggested hobby is: ' + hobby;
+            document.getElementById('result').style.display = 'block';
+        }
+    </script>
 </body>
 </html>
