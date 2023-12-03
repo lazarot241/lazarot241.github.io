@@ -2,23 +2,32 @@
 <head>
     <title>Welcome to Lazaro Torres's Page</title>
     <style>
+        body {
+            background-color: #f4f4f4; /* Grey background */
+            color: #000; /* Black text */
+            font-family: Arial, sans-serif;
+        }
         .centered {
             text-align: center;
             font-weight: bold;
             text-decoration: underline;
         }
-        .personal-story {
+        .personal-story, .hobbies, .photos {
             margin: 20px;
             font-size: 16px;
-        }
-        .hobbies a {
-            display: block; /* Makes each link appear on a new line */
-            margin-bottom: 10px; /* Adds some space below each link */
         }
         .photos img {
             width: 50%; /* Adjust as needed */
             height: auto; /* Maintain aspect ratio */
-            margin-bottom: 20px; /* Space between photos */
+            display: block;
+            margin: 20px auto; /* Centering images */
+        }
+        a {
+            color: #000; /* Black text for links */
+            text-decoration: none; /* Optional: Removes underline from links */
+        }
+        a:hover {
+            text-decoration: underline; /* Optional: Adds underline on hover */
         }
     </style>
 </head>
