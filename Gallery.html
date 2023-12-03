@@ -1,1 +1,35 @@
-
+<html>
+<head>
+    <title>Hobbies and Interests Gallery</title>
+    <style>
+        body {
+            background-color: #f4f4f4; /* Gray background */
+            color: #000; /* Black text */
+            font-family: Arial, sans-serif;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="centered">My Hobbies and Interests</h1>
+    <div class="gallery">
+        <!-- Add your images here -->
+        <img src="path-to-your-image1.jpg" alt="Description of image 1">
+        <img src="path-to-your-image2.jpg" alt="Description of image 2">
+        <!-- More images... -->
+    </div>
+</body>
+</html>
